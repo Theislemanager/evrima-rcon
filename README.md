@@ -3,7 +3,7 @@ PHP libary for The Isle Evrima RCON
 
 
 
-###Example Usage
+Example Usage
 
 ```
     require_once('rcon.php');
