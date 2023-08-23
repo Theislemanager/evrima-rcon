@@ -45,11 +45,11 @@ The configuration for RCON is set through the Game.ini file; here is an example 
 bRconEnabled=true
 RconPassword=Password123
 RconPort=1000
-
-RconEnabled enables/disables the RCON.
-RconPassword sets the password used for authentication.
-RconPort sets the port RCON will use.
 ```
+- RconEnabled enables/disables the RCON.
+- RconPassword sets the password used for authentication.
+- RconPort sets the port RCON will use.
+
 
 **COMMAND LIST**
 
