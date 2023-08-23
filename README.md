@@ -7,8 +7,7 @@ PHP libary for The Isle Evrima RCON
 ![image](https://github.com/Theislemanager/evrima-rcon/assets/143001364/139adfcb-4946-4d89-8294-15f3b07374a5)
 
 
-```
-<?PHP
+```php
     include __DIR__ . '/src/rcon.php';
     $rcon = new RconClient('your_server_ip', 'your_rcon_port', 'your_rcon_password');
     if($rcon->connect()){
@@ -21,6 +20,6 @@ PHP libary for The Isle Evrima RCON
 ```
 
 
-### Documentation for RCON
+### Documentation for RCON from game developers
 
 https://docs.google.com/document/d/1JI_qVdKIZrqcVTY2Tqnm1T_Ws3_1r5nINGxfprbWw7w/edit#heading=h.p9tfb89b07jd
