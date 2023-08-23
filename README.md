@@ -15,3 +15,4 @@ Example Usage
         echo "Could not connect";
     }
 ```
+![image](https://github.com/Theislemanager/evrima-rcon/assets/143001364/139adfcb-4946-4d89-8294-15f3b07374a5)
