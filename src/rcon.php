@@ -73,7 +73,6 @@ class RconClient {
         }
 
         $commandByte = $commandByteMap[$commandName];
-        $this->reconnect();
 
         $commandPacket = "\x02" . chr($commandByte) . $commandData . "\x00";
         $this->sendPacket($commandPacket);
