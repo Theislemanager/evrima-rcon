@@ -46,12 +46,12 @@ RconPort sets the port RCON will use.
 
 **COMMAND LIST**
 
-> Announce – Announces a message on the server and is displayed to all players.
-> Update Playables – Updates the current available playable classes.
-> Get Player List – Returns a list of all players as a string. (Names separated by a comma and Steam Ids separated by a comma. Names and Steam Ids are separated by > escape sequence ‘\n’ )
-> Kick Player – Kicks a player by steam id.
-> Ban player – Bans a player by steam id.
-> Save – Saves all game data.
+- Announce – Announces a message on the server and is displayed to all players.
+- Update Playables – Updates the current available playable classes.
+- Get Player List – Returns a list of all players as a string. (Names separated by a comma and Steam Ids separated by a comma. Names and Steam Ids are separated by > escape sequence ‘\n’ )
+- Kick Player – Kicks a player by steam id.
+- Ban player – Bans a player by steam id.
+- Save – Saves all game data.
 
 
 
