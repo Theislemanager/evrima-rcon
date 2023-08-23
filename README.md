@@ -5,6 +5,8 @@ PHP libary for The Isle Evrima RCON
 
 ## Example Usage
 ![image](https://github.com/Theislemanager/evrima-rcon/assets/143001364/139adfcb-4946-4d89-8294-15f3b07374a5)
+![image](https://github.com/Theislemanager/evrima-rcon/assets/143001364/746d1b50-59ec-4c1e-83e3-e4d23ade28ff)
+
 
 
 ```php
