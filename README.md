@@ -3,7 +3,7 @@ PHP libary for The Isle Evrima RCON
 
 
 
-Example Usage
+## Example Usage
 ![image](https://github.com/Theislemanager/evrima-rcon/assets/143001364/139adfcb-4946-4d89-8294-15f3b07374a5)
 
 
@@ -20,6 +20,6 @@ Example Usage
 ```
 
 
-## Documentation for RCON
+### Documentation for RCON
 
 https://docs.google.com/document/d/1JI_qVdKIZrqcVTY2Tqnm1T_Ws3_1r5nINGxfprbWw7w/edit#heading=h.p9tfb89b07jd
