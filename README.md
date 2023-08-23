@@ -18,3 +18,8 @@ Example Usage
         echo "Could not connect";
     }
 ```
+
+
+## Documentation for RCON
+
+https://docs.google.com/document/d/1JI_qVdKIZrqcVTY2Tqnm1T_Ws3_1r5nINGxfprbWw7w/edit#heading=h.p9tfb89b07jd
