@@ -42,13 +42,13 @@ The configuration for RCON is set through the Game.ini file; here is an example 
 
 ```
 [/Script/TheIsle.TIGameSession]
-bRconEnabled=true
+RconEnabled=true
 RconPassword=Password123
 RconPort=1000
 ```
-- RconEnabled enables/disables the RCON.
-- RconPassword sets the password used for authentication.
-- RconPort sets the port RCON will use.
+- `RconEnabled` enables/disables the RCON.
+- `RconPassword` sets the password used for authentication.
+- `RconPort` sets the port RCON will use.
 
 
 **COMMAND LIST**
