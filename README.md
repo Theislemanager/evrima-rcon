@@ -1,8 +1,8 @@
 # evrima-rcon
 PHP libary for The Isle Evrima RCON
 
-#Example Usage
-
+##Example Usage
+```
     require_once('rcon.php');
     $rcon = new RconClient("your_server_ip", "your_rcon_port", "your_rcon_password");
     if($rcon->connect()){
@@ -11,3 +11,4 @@ PHP libary for The Isle Evrima RCON
     }else{
         echo "Could not connect";
     }
+```
