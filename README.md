@@ -41,7 +41,7 @@ The most common use of RCON is to allow server owners to control their game serv
 The configuration for RCON is set through the Game.ini file; here is an example of the available configuration settings. 
 
 ```
-[/Script/TheIsle.TIGameSession]
+[/Script/Engine.Game]
 RconEnabled=true
 RconPassword=Password123
 RconPort=1000
