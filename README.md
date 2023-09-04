@@ -56,6 +56,7 @@ RconPort=1000
 
 *Wrong Password (but does connect):*
 - `[2023.09.04-19.50.45:909][ 57]LogTemp: Warning: Unauthenticated RCON connection tried sending commands from: 0.0.0.0`
+  
 *Correct login information:*
 - `[2023.09.04-19.51.05:470][603]LogTemp: Warning: New RCON Connection Authenticated!`
 
