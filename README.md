@@ -50,7 +50,7 @@ RconPort=1000
 - `RconPassword` sets the password used for authentication.
 - `RconPort` sets the port RCON will use.
 
-Server should start up with saying /Found in TheIsle.log file:
+Server should start up with saying /Found in TheIsle.log file:\n
 `[2023.09.04-19.30.16:995][ 57]LogTemp: RCON server listening at: 0.0.0.0:8888`
 `[2023.09.04-19.30.16:996][ 57]LogTemp: Queue system listening on: 0.0.0.0:10000`
 
