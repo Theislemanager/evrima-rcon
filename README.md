@@ -54,7 +54,6 @@ RconPort=1000
 - `[2023.09.04-19.30.16:995][ 57]LogTemp: RCON server listening at: 0.0.0.0:8888`
 - `[2023.09.04-19.30.16:996][ 57]LogTemp: Queue system listening on: 0.0.0.0:10000`
 
-*Also found in TheIsle.log*
 *Wrong Password (but does connect):*
 - `[2023.09.04-19.50.45:909][ 57]LogTemp: Warning: Unauthenticated RCON connection tried sending commands from: 0.0.0.0`
 *Correct login information:*
