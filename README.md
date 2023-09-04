@@ -50,14 +50,14 @@ RconPort=1000
 - `RconPassword` sets the password used for authentication.
 - `RconPort` sets the port RCON will use.
 
-Server should start up with saying /Found in TheIsle.log file:
+*Server should start up with saying (Found in TheIsle.log file)*:
 - `[2023.09.04-19.30.16:995][ 57]LogTemp: RCON server listening at: 0.0.0.0:8888`
 - `[2023.09.04-19.30.16:996][ 57]LogTemp: Queue system listening on: 0.0.0.0:10000`
 
-Also found in TheIsle.log
-Wrong Password (but does connect): 
+*Also found in TheIsle.log*
+*Wrong Password (but does connect):*
 - `[2023.09.04-19.50.45:909][ 57]LogTemp: Warning: Unauthenticated RCON connection tried sending commands from: 0.0.0.0`
-Correct login information:
+*Correct login information:*
 - `[2023.09.04-19.51.05:470][603]LogTemp: Warning: New RCON Connection Authenticated!`
 
 If nothing shows in TheIsle.log file, there is no connection that makes through.
