@@ -46,6 +46,15 @@ RconEnabled=true
 RconPassword=Password123
 RconPort=1000
 ```
+OR
+```
+[/Script/TheIsle.TIGameSession]
+QueueEnabled=true
+QueuePort=14042
+bRconEnabled=true
+RconPassword=Password123
+RconPort=1000
+```
 - `RconEnabled` enables/disables the RCON.
 - `RconPassword` sets the password used for authentication.
 - `RconPort` sets the port RCON will use.
