@@ -101,6 +101,9 @@ RCON_KICKPLAYER 0x30
 RCON_GETPLAYERLIST 0x40
 RCON_SAVE 0x50
 RCON_COMMAND 0x70 (Used internally)
+RCON_TOGGLEWHITELIST 0x81
+RCON_ADDWHITELISTID 0x82
+RCON_REMOVEWHITELISTID 0x83
 ```
 
 [Documentation Link](https://docs.google.com/document/d/1JI_qVdKIZrqcVTY2Tqnm1T_Ws3_1r5nINGxfprbWw7w/edit#heading=h.p9tfb89b07jd)
