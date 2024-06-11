@@ -3,6 +3,11 @@
 
 namespace Theislemanager;
 
+<?php
+
+
+namespace Theislemanager;
+
 class RconClient {
     private $socket;
     private $host;
@@ -16,7 +21,6 @@ class RconClient {
         $this->password = $password;
     }
 
-
     public function connect() {
         $this->socket = fsockopen($this->host, $this->port, $errno, $errstr, 1);
 
@@ -27,7 +31,6 @@ class RconClient {
             return false;
         }
     }
-
 
     private function authorize() {
         if (!$this->isAuthorized) {
@@ -45,6 +48,7 @@ class RconClient {
     private function disconnect() {
         fclose($this->socket);
     }
+
     private function reconnect() {
         $this->disconnect();
         $this->connect();
@@ -57,6 +61,7 @@ class RconClient {
     private function readPacket() {
         return fread($this->socket, 4096);
     }
+
     public function sendCommand($commandName, $commandData = '') {
         $commandByteMap = [
             'announce' => 0x10,
@@ -66,10 +71,13 @@ class RconClient {
             'playerlist' => 0x40,
             'save' => 0x50,
             'custom' => 0x70,
+            'togglewhitelist' => 0x81,
+            'addwhitelist' => 0x82,
+            'removewhitelist' => 0x83,
         ];
 
         if (!isset($commandByteMap[$commandName])) {
-            return("Unknown command: $commandName");
+            return "Unknown command: $commandName";
         }
 
         $commandByte = $commandByteMap[$commandName];
@@ -78,27 +86,6 @@ class RconClient {
         $this->sendPacket($commandPacket);
         $response = $this->readPacket();
         $this->disconnect();
-        return $this->getResponseForCommand($commandName, $response, $commandData);
-    }
-
-    private function getResponseForCommand($commandName, $response, $input = '') {
-        switch ($commandName) {
-            case 'announce':
-                return "Announced: $input";
-            case 'updateplayables':
-                return $response;
-            case 'ban':
-                return "Banned: $input";
-            case 'kick':
-                return "Kicked: $input";
-            case 'playerlist':
-                return $response;
-            case 'save':
-                return 'Server has been saved';
-            case 'custom':
-                return 'Sent Command';
-            default:
-                return 'Unknown command';
-        }
+        return empty($response) ? "Command sent." : $response;
     }
 }
