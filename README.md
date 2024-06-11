@@ -83,7 +83,9 @@ If nothing shows in TheIsle.log file, there is no connection that makes through.
 - Kick Player – Kicks a player by steam id.
 - Ban player – Bans a player by steam id.
 - Save – Saves all game data.
-
+- togglewhitelist - Turns the server whitelist on/off.
+- addwhitelist - Adds steam ids to the server whitelist.
+- removewhitelist - Removes steamids from the server whitelist.
 
 
 
