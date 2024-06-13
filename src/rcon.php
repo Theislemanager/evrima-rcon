@@ -1,11 +1,5 @@
 <?php
 
-
-namespace Theislemanager;
-
-<?php
-
-
 namespace Theislemanager;
 
 class RconClient {
