@@ -14,7 +14,6 @@ class RconClient {
         $this->port = $port;
         $this->password = $password;
     }
-
     public function connect() {
         $this->socket = fsockopen($this->host, $this->port, $errno, $errstr, 1);
 
@@ -34,18 +33,12 @@ class RconClient {
                 return false;
             }
             $this->isAuthorized = true;
-            $this->reconnect();
             return true;
         }
     }
 
     private function disconnect() {
         fclose($this->socket);
-    }
-
-    private function reconnect() {
-        $this->disconnect();
-        $this->connect();
     }
 
     private function sendPacket($data) {
@@ -71,15 +64,14 @@ class RconClient {
         ];
 
         if (!isset($commandByteMap[$commandName])) {
-            return "Unknown command: $commandName";
+            return("Unknown command: $commandName");
         }
 
         $commandByte = $commandByteMap[$commandName];
-
         $commandPacket = "\x02" . chr($commandByte) . $commandData . "\x00";
         $this->sendPacket($commandPacket);
         $response = $this->readPacket();
         $this->disconnect();
-        return empty($response) ? "Command sent." : $response;
+        echo $response ?? "Sent $commandName: $commandData";
     }
 }
