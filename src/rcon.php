@@ -14,16 +14,19 @@ class RconClient {
         $this->port = $port;
         $this->password = $password;
     }
+
+
     public function connect() {
         $this->socket = fsockopen($this->host, $this->port, $errno, $errstr, 1);
 
         if ($this->socket) {
-            stream_set_timeout($this->socket, 3);
+            stream_set_timeout($this->socket, 2);
             return $this->authorize();
         } else {
             return false;
         }
     }
+
 
     private function authorize() {
         if (!$this->isAuthorized) {
@@ -40,7 +43,6 @@ class RconClient {
     private function disconnect() {
         fclose($this->socket);
     }
-
     private function sendPacket($data) {
         fwrite($this->socket, $data);
     }
@@ -48,19 +50,25 @@ class RconClient {
     private function readPacket() {
         return fread($this->socket, 4096);
     }
-
     public function sendCommand($commandName, $commandData = '') {
         $commandByteMap = [
             'announce' => 0x10,
+            'directmessage' => 0x11,
+            'serverdetails' => 0x12,
             'updateplayables' => 0x15,
             'ban' => 0x20,
             'kick' => 0x30,
             'playerlist' => 0x40,
             'save' => 0x50,
-            'custom' => 0x70,
+            'getplayerdata' => 0x77,
             'togglewhitelist' => 0x81,
             'addwhitelist' => 0x82,
             'removewhitelist' => 0x83,
+            'toggleglobalchat' => 0x84,
+            'togglehumans' => 0x86,
+            'toggleai' => 0x90,
+            'disableaiclasses' => 0x91,
+            'aidensity' => 0x92
         ];
 
         if (!isset($commandByteMap[$commandName])) {
@@ -68,10 +76,12 @@ class RconClient {
         }
 
         $commandByte = $commandByteMap[$commandName];
+
         $commandPacket = "\x02" . chr($commandByte) . $commandData . "\x00";
         $this->sendPacket($commandPacket);
         $response = $this->readPacket();
         $this->disconnect();
-        echo $response ?? "Sent $commandName: $commandData";
+        return $response ?? $commandName.' Command Sent';
     }
+
 }
