@@ -64,10 +64,18 @@ bEnableMigration=true // Enable patrol zones, species migrations, and mass migra
 MaxMigrationTime=5400 // Value is in seconds. This controls how long the migration zones should last.
 GrowthMultiplier=1 - Universal multiplier for growth. Putting this number too high will break it. Recommendation is no higher than 20, even for lulz.
 bEnableMutations=true // Enable mutations.
+CorpseDecayMultiplier=1 //Multiplies how fast corpses decay to despawn - Reduce value to be faster
+bUseRegionSpawning=false //Enable region spawn
+bUseRegionSpawnCooldown=true //Enable region cooldown
+RegionSpawnCooldownTimeSeconds=600 //Region cooldown max time.
+bRandomWeatherEnabled //Enable/Disable Weather variation
+MinWeatherVariationInterval=600 //Set in seconds how often to switch weather
+MaxWeatherVariationInterval=900 //Set in seconds how often to switch weather
 
 [/Script/TheIsle.TIGameStateBase]
 AdminsSteamIDs=Admin steam ID here // SteamID64 format
 WhitelistIDs=White list steam ID here // SteamID64 format. NOTE: Must be enabled in the game session below. Keep this empty if whitelist is disabled
+VIPs=
 // List of all enabled classes. Remove a line to remove a class from spawning. - Can also be managed in Admin Panel in real time.
 AllowedClasses=Hypsilophodon
 AllowedClasses=Pachycephalosaurus
@@ -126,6 +134,8 @@ AllowedClasses=Herrerasaurus
 // EnabledMutations=(MutationName=Social Behavior,EffectValue=1) *****// Value must be 1 or remove from this list to disable it.
 // EnabledMutations=(MutationName=Traumatic Thrombosis,EffectValue=1) *****// Value must be 1 or remove from this list to disable it.
 // EnabledMutations=(MutationName=Reniculate Kidneys,EffectValue=1) *****// Value must be 1 or remove from this list to disable it.
+// EnabledMutations=(MutationName="NHJ-INF",EffectValue=1)
+// EnabledMutations=(MutationName="NHJ-UND",EffectValue=1)
 
 // Add the names of each AI class that should be disabled, one line for each.
 // DisallowedAIClasses=Compsognathus
