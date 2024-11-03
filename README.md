@@ -14,8 +14,7 @@ include __DIR__ . '/src/rcon.php';
 $rcon = new RconClient('your_server_ip', 'your_rcon_port', 'your_rcon_password');
 if($rcon->connect()){
 $response = $rcon->sendCommand('announce', 'Hello World');
-//$response = $rcon->sendCommand('kick', 'STEAMID64');
-echo $response.PHP_EOL;
+echo $response;
 }else{
 echo 'Could not connect';
 }
@@ -150,19 +149,30 @@ AllowedClasses=Herrerasaurus
 *Correct login information:*
 - `[2023.09.04-19.51.05:470][603]LogTemp: Warning: New RCON Connection Authenticated!`
 
-If nothing shows in TheIsle.log file, there is no connection that makes through.
+If nothing shows in `TheIsle-Shipping.log` file, there is no connection that makes through.
 
 **COMMAND LIST**
 
 - Announce – Announces a message on the server and is displayed to all players.
 - Update Playables – Updates the current available playable classes.
-- Get Player List – Returns a list of all players as a string. (Names separated by a comma and Steam Ids separated by a comma. Names and Steam Ids are separated by > escape sequence ‘\n’ )
-- Kick Player – Kicks a player by steam id.
-- Ban player – Bans a player by steam id.
+- Get Player List – Returns a list of all players as a string.
+- Kick Player – Kicks a player by player id.
+- Ban player – Bans a player by player id.
 - Save – Saves all game data.
-- togglewhitelist - Turns the server whitelist on/off.
-- addwhitelist - Adds steam ids to the server whitelist.
-- removewhitelist - Removes steamids from the server whitelist.
+- Toggle Whitelist - Turns the server whitelist on/off
+- Add Whitelist IDs - Adds player id to the server whitelist
+- Remove Whitelist IDs - Removes player ids from the server whitelist
+- Direct Message - Send a message as an announcement to a player
+- Get server details - Retrieves all the current server settings.
+- Update playables - Modifies the playable classes.
+- Get player data - Retrieves some info about each player like location,character stats etc..
+- Toggle global chat - Turns global chat on/off
+- Toggle humans - Turns humans on/off
+- Toggle AI - Turns AI spawns on/off
+- Disable AI classes - Updates the allowable AI spawn list.
+- AI Density - Adjusts the AI spawn density
+- Wipe Corpses - Wipes corpses
+
 
 
 
@@ -190,7 +200,7 @@ RCON_TOGGLEHUMANS 0x86
 RCON_TOGGLEAI 0x90
 RCON_DISABLEAICLASSES 0x91
 RCON_AIDENSITY 0x92
-
+RCON_WIPECORPSES 0x13
 ```
 
 [Documentation Link](https://docs.google.com/document/d/1JI_qVdKIZrqcVTY2Tqnm1T_Ws3_1r5nINGxfprbWw7w/edit#heading=h.p9tfb89b07jd)
