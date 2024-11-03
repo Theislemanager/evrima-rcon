@@ -55,6 +55,7 @@ class RconClient {
             'announce' => 0x10,
             'directmessage' => 0x11,
             'serverdetails' => 0x12,
+            'wipecorpses' => 0x13,
             'updateplayables' => 0x15,
             'ban' => 0x20,
             'kick' => 0x30,
